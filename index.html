@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo Twitter</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="imagen/twitter-128.png" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/fontawesome-webfont.woff">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!-- enlazar glyphicons<link rel="stylesheet" href="css/font-awesome.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <nav id="principal" class="row">
+      <div class="col-xs-offset-1 col-xs-10 logo">
+        <a href="#"><img class="col-xs-offset-2 col-sm-offset-4 col-xs-6 col-sm-2 logo" src="imagen/TODO.png" alt="logo-app-todo"></a>
+        <h1 class="col-sm-3 col-xs-4"> <img class="imagen-check" src="imagen/twitt-check.png" alt="check twitter">Haz tu propia lista </h1>
+              </div>
+    </nav>
+    <section>
+    <!-- añadir tareas a la lista -->
+      <div id="myDIV" class="header rounded">
+        <input type="text" id="myInput" placeholder="Escríbe tus pendientes">
+        <span onclick="newElement()" class="addBtn">Agregar</span>
+      </div>
+      <ul id="myUL">
+        <!-- <li>Mi primera tarea</li> -->
+       </ul>
+    </section>
+    <!-- Aqui va el script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
