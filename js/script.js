@@ -1,55 +1,41 @@
-// Este es mi js
-var myNodelist = document.getElementsByTagName('li');
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement('span');
-  var textoInput = document.createTextNode(" ");
-  span.className = "remove";
-  span.appendChild(textoInput);
-  myNodelist[i].appendChild(span);
-}
-// // Click on a close button to hide the current list item
-// var close = document.getElementsByClassName("remove");
-// var i;
-// for (i = 0; i < close.length; i++) {
-//   close[i].onclick = function(){
-//  var div = this.parentElement;
-//     div.style.display = "none";
-//   }
-// }
+$(document).ready(function() {
+	var elementos=0;
+	$('.addBtn').click(function() {
+		if ($('#texTarea').val() == ""){
+			alert('Recuerda ingresar tus pendientes');
+		} else{
+		var valorTexto = $('#texTarea').val();
+		elementos++;
+	// Añadir caja de texto
+        $('.elementos').append('<li id="'+elementos+'"><span class="texto">'+valorTexto+'</span><i name="'+elementos+'" class="fa fa-heart favorito" id="" aria-hidden="true"></i><i class="fa fa-trash eliminar" aria-hidden="true" name="'+elementos+'"></i><input name="'+elementos+'" class="hecho" type="checkbox"></li>');
+   		$('#texTarea').val('');
+   		}
+   	});
+   	// Basuritas
+	$('.elementos').on("click", "i.eliminar", function(){
+		var nro="#"+$(this).attr("name");
+		// console.log(nro);
+		$(nro).remove();
+	});
+	$('.elementos').on("click", "i.favorito", function(){
+		if($(this).attr("id")=="red"){
+			$(this).css("color", "white");
+			$(this).attr("id", "blanco");
+		}else{
+			$(this).css("color", "red");
+			$(this).attr("id", "red");
+		}
+		
+	});
+	$('.elementos').on("click", ".hecho", function(){
+		var nro="#"+$(this).attr("name")+" .texto";
+		if( $(this).prop('checked')) {
+			$(nro).css("text-decoration", "line-through");
+		} else{
+			$(nro).css("text-decoration", "none");
+		}
 
-// Para ver si está hecha la tarea
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+	});
 
 
-// Agregar tarea
-
-function newElement() {
-  var li = document.createElement('li');
-  var inputValue = document.getElementById("myInput").value;	
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  // if (inputValue === '') {
-  //   alert("Debes escribir tus pendientes aquí");
-  // } else {
-  //   document.getElementById("myUL").appendChild(li);
-  // }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement('span');
-  var txt = document.createTextNode("x");
-  span.className = "remove";
-  span.appendChild(txt);
-  li.appendChild(span);
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-};
+});

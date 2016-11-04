@@ -5,7 +5,10 @@
     font-family: 'Lobster', cursive;
 }
 body{
-	background-color: #e1e8ed;
+	background-color: #f5f8fa;
+}
+.row{
+	margin: 0;
 }
 /*nav principal*/
 #principal {
@@ -13,6 +16,16 @@ body{
 }
 .logo{
 	padding-top: 10px;
+	margin-bottom: 10px;
+}
+@media screen and (max-width: 400px) {
+	h1{
+		padding-top: 0;
+		margin-top: 0;
+	}
+	h1 .imagen-check{
+		display: none !important; 
+	}
 }
 .header {
 	background-color: #1da1f2;
@@ -40,8 +53,11 @@ ul {
 ul li {
     cursor: pointer;
     position: relative;
+    margin-left: 8%;
+    width: 75%;
     padding: 12px 8px 12px 40px;
     font-size: 17px;
+    border-radius: 8px;
     color: #657786;
     transition: 0.2s;
     /* make the list items unselectable */
@@ -49,30 +65,31 @@ ul li {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    list-style: none;
 }
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
 	background-color: #e1e8ed;
 }
 ul li:hover {
-    background: red;
+    background: black;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
-    background: blue;
-    color: yellow;
+ul li.listo{
+    background:#black;
+    color: #e1e8ed;
     text-decoration: line-through;
 }
-ul li.checked::before {
-    content: '';
+ul li.listo:before {
+    /*content: '';*/
     position: absolute;
     border-color: #fff;
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 10px;
     left: 16px;
-    transform: rotate(45deg);
+    transform: rotate(35deg);
     height: 15px;
     width: 7px;
 }
@@ -84,34 +101,28 @@ ul li.checked::before {
 }
 .remove:hover {
     background-color: #f44336;
-    color: white;
+    color: black;
 }
-
-
-/* Style the input */
-input {
-    border: none;
-    width: 75%;
+textarea{
+    border-radius: 8px;
+    width: 85%;
     padding: 10px;
-    float: left;
+    margin: 10px;
     font-size: 17px;
-    border-radius: 10px 0 0 10px;
 }
-
-/* Style the "Add" button */
 .addBtn {
-    padding: 10px;
-    width: 25%;
-    background: green;
-    color: white;
+    padding: 30px;
+    background-image: url(../imagen/twitt-check.png);
+    background-size: cover;
     float: left;
     text-align: center;
-    font-size: 17px;
     cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0 10px 10px 0;
+    transition: 0.5s;
+    border-radius: 100%;
+    border: solid #f5f8fa 3px;
+    margin: 10px;
 }
 
 .addBtn:hover {
-    background-color: #bbb;
+    border: solid green 3px;
 }
