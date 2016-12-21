@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="fonts/fontawesome-webfont.woff">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <!-- enlazar glyphicons<link rel="stylesheet" href="css/font-awesome.css"> -->
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-   <!-- CABECERA -->
-    <nav id="principal">
+    <!-- CABECERA -->
+    <section class="degrad">
+      <nav id="principal">
       <div class="row">
-         <div class="logo">
-           <a href="#"><img class="col-xs-offset-1 col-xs-5 col-sm-5 col-md-2 col-md-offset-4 logo" src="imagen/TODO.png" alt="logo-app-todo"></a>
-           <h1 class="col-sm-6 col-xs-5"> <img class="imagen-check" src="imagen/twitt-check.png" alt="check twitter">Haz tu propia lista </h1>
-         </div>
+         <div class="logo col-xs-12 text-center">
+           <h1>To do App</h1>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h2>¡Haz tu propia lista de pendientes!</h2>
+        </div>
       </div>
     </nav>
     <section>
@@ -26,8 +32,8 @@
     <!-- Añadir tareas a la lista -->
       <div class="row">
          <div id="myDIV" class="#">
-            <textarea type="text" id="texTarea" class=" col-xs-offset-1 col-xs-7 col-sm-9" placeholder="Escríbe tus pendientes"></textarea>
-            <span onclick="" class="addBtn"></span>
+            <textarea type="text" id="texTarea" class=" col-xs-offset-2 col-xs-10 col-sm-8" placeholder="Escríbe tus pendientes"></textarea>
+            <span onclick="" class="addBtn"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
          </div>
     </section>
     <!-- Mostrar lista de tareas -->
@@ -39,8 +45,9 @@
          </div>
       </div>        
     </section>
-    <!-- Aqui va el script - NO BORRAR-->
-    <script src="js/jquery-3.1.1.min (1).js"></script>
+        <!-- Aqui va el script - NO BORRAR-->
+    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/script.js"></script>
+    </section>
 </body>
       

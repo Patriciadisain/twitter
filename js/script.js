@@ -39,3 +39,8 @@ $(document).ready(function() {
 
 
 });
+// $(document).ready(function(){
+// 	$('p').click(function(){
+// 		alert('hola mundo')
+// 	});
+// });
